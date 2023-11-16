@@ -105,15 +105,20 @@ export default function HomePage() {
                             Data Loading...
                         </div>
                         : ''}
-                   
+
                     {AllRecs.map((E, I) => (
-                        // <FeedbackItem key={I} Itm={E} OpenEntryFeedbackVoting={() => setShowEntryFeedbackVoting(E)} />
-                        <FeedbackItem key={I} Itm={E} OpenFeedbackVoting={() => HandleBtnFeedbackVoting(E)} />
+                        // <FeedbackItemItm={E} OpenEntryFeedbackVoting={() => setShowEntryFeedbackVoting(E)} />
+                        // <FeedbackItem key={I} Itm={E} OpenFeedbackVoting={() => HandleBtnFeedbackVoting(E)} />
+
+                        <div key={I} >
+                            <h2 className="font-bold">{E.Title}</h2>
+                            <p className="text-gray-600 text-sm">{E.Desc}</p>
+                        </div>
                     ))
                     }
                 </div>
 
-                {ShowEntryFeedback && <EntryFeedback ShowWindow={setShowEntryFeedback} setHardRefresh={setHardRefresh}/>}
+                {ShowEntryFeedback && <EntryFeedback ShowWindow={setShowEntryFeedback} setHardRefresh={setHardRefresh} />}
                 {ShowEntryFeedbackVoting && <EntryFeedbackVoting ShowWindow={setShowEntryFeedbackVoting} Itm={ShowEntryFeedbackVoting} />}
 
             </main>
