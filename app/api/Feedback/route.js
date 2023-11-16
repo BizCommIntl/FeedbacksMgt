@@ -6,10 +6,10 @@ import mongoose from "mongoose";
 // ************* GET Rec ************
 export async function GET() {
   console.log('Getting Feedbacks from Api');
-  // const conn= process.env.mongoURL
   // const conn = process.env["mongoURL"]
-  // const chk=mongoose.connect( conn )
-  await mongoose.connect('mongodb+srv://Muffi:ugKoucNpkiv626qf@clusterx.yag3axg.mongodb.net/?retryWrites=true&w=majority')
+  const conn= process.env.MONGO_URL
+  const chk= await mongoose.connect( conn )  
+  // await mongoose.connect('mongodb+srv://Muffi:ugKoucNpkiv626qf@clusterx.yag3axg.mongodb.net/?retryWrites=true&w=majority')
     
   return Response.json(await FeedbackModel.find())
   }

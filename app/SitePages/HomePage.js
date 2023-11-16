@@ -83,7 +83,7 @@ export default function HomePage() {
             <main className='bg-white md:max-w-2xl mx-auto md:shadow-lg md:rounded-lg md:mt-8 overflow-hidden'>
 
                 <div className="p-8 bg-gradient-to-r from-cyan-400 to-blue-400" >
-                    <h1 className="font-bold text-xl">Coding with Mufakhar 16Nov 10:13pm</h1>
+                    <h1 className="font-bold text-xl">Coding with Mufakhar 16Nov 10:30pm</h1>
                     <div className="text-opacity-90 text-slate-700">
                         Help me decide, what should I do in Next and React Mern Full Stack Development
                     </div>
