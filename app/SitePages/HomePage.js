@@ -83,7 +83,7 @@ export default function HomePage() {
             <main className='bg-white md:max-w-2xl mx-auto md:shadow-lg md:rounded-lg md:mt-8 overflow-hidden'>
 
                 <div className="p-8 bg-gradient-to-r from-cyan-400 to-blue-400" >
-                    <h1 className="font-bold text-xl">Coding with Mufakhar 16Nov 10:30pm</h1>
+                    <h1 className="font-bold text-xl">Coding with Mufakhar</h1>
                     <div className="text-opacity-90 text-slate-700">
                         Help me decide, what should I do in Next and React Mern Full Stack Development
                     </div>
@@ -105,20 +105,15 @@ export default function HomePage() {
                             Data Loading...
                         </div>
                         : ''}
-
+                   
                     {AllRecs.map((E, I) => (
-                        // <FeedbackItemItm={E} OpenEntryFeedbackVoting={() => setShowEntryFeedbackVoting(E)} />
-                        // <FeedbackItem key={I} Itm={E} OpenFeedbackVoting={() => HandleBtnFeedbackVoting(E)} />
-
-                        <div key={I} >
-                            <h2 className="font-bold">{E.Title}</h2>
-                            <p className="text-gray-600 text-sm">{E.Desc}</p>
-                        </div>
+                        // <FeedbackItem key={I} Itm={E} OpenEntryFeedbackVoting={() => setShowEntryFeedbackVoting(E)} />
+                        <FeedbackItem key={I} Itm={E} OpenFeedbackVoting={() => HandleBtnFeedbackVoting(E)} />
                     ))
                     }
                 </div>
 
-                {ShowEntryFeedback && <EntryFeedback ShowWindow={setShowEntryFeedback} setHardRefresh={setHardRefresh} />}
+                {ShowEntryFeedback && <EntryFeedback ShowWindow={setShowEntryFeedback} setHardRefresh={setHardRefresh}/>}
                 {ShowEntryFeedbackVoting && <EntryFeedbackVoting ShowWindow={setShowEntryFeedbackVoting} Itm={ShowEntryFeedbackVoting} />}
 
             </main>
