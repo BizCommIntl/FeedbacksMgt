@@ -50,7 +50,7 @@ export default function PopUp({ Title = '', ShowWindow, SizeNarrow, children }) 
                             </svg>
                         </button>
 
-                        {Title && <h2 className='py-4 mx-auto border-b'>{Title}</h2>}
+                        {Title && <h2 className='py-4 mx-auto border-b font-bold'>{Title}</h2>}
                     </div>
 
                     {children}

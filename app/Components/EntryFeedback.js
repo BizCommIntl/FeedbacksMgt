@@ -154,7 +154,7 @@ export default function EntryFeedback({ ShowWindow, setHardRefresh }) {
         </div>
 
         {/* Right Panel: ****************** Image Section */}
-        <div className='p-8 w-full md:w-2/5 '>
+        <div className='p-8 w-full md:w-2/5  flex flex-col'>
           <label className='cursor-pointer'>
             <span>Attach File (if any)</span>
             <input type="file" className="hidden" onChange={(e) => HandleOnChangeFileBrowser(e)} />
